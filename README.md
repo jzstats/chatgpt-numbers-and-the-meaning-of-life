@@ -20,7 +20,7 @@ Do you know about **The Meaning of Life**?
 
 If you want the full story, 
 visit the project's GitHub Page:  
-- ChatGPT, Numbers and The Meaning of Life!  
+- [ChatGPT, Numbers and The Meaning of Life!](https://jzstats.github.io/chatgpt-numbers-and-the-meaning-of-life/)
 
 
 <br> 
