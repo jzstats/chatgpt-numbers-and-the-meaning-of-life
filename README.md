@@ -15,13 +15,12 @@ To the contrary out of a sample of 10000 numbers
 there are 5 that occured more than 50% of the time
 and the most frequent of all them occured more than 20%.
 
-So what is that number? Let me give you a hint:
+So what is that number? Let me give you a hint:  
 Do you know about **The Meaning of Life**? 
 
 If you want the full story, 
 visit the project's GitHub Page:  
-
-    - ChatGPT, Numbers and The Meaning of Life!  
+- ChatGPT, Numbers and The Meaning of Life!  
 
 
 <br> 
