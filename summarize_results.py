@@ -1,6 +1,6 @@
 import sqlite3
 
-def get_data():
+def data_getter():
     conn = sqlite3.connect('./data/numbersdb.sqlite')
     cur = conn.cursor()
     cur.execute("SELECT number FROM Numbers")
@@ -56,12 +56,19 @@ def present_summary(summary):
             print(str(k) + " occured 1 time")
         else:
             print(str(k) + " occured " + str(v) + " times")
-# Read the Processed Data in python
-numbers = get_data()
 
-# Summarize occurances of each number
-summary = summarize_numbers(numbers)
 
-# Present results 
-present_summary(summary)
-        
+def summarize_results():
+    while True:
+        try: 
+            # Read the Processed Data in python
+            numbers = data_getter()
+
+            # Summarize occurances of each number
+            summary = summarize_numbers(numbers)
+
+            # Present results 
+            present_summary(summary)
+        except KeyboardInterrupt:
+            print('User Interrupt.')
+            exit()
