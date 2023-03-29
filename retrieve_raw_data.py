@@ -1,14 +1,13 @@
-import time
 import sqlite3
 import openai
-import config
 
-def get_api_key():
-    # The API Key is expected to exist in a file,
-    # called 'config.py' (in the same directory as this script),
-    # and to contain a variable named api_key
-    # with the value of your API Key.
-    return config.api_key 
+from time import sleep
+
+# The API Key is expected to exist in a file,
+# called 'config.py' (in the same directory as this script),
+# and to contain a variable named api_key
+# with the value of your API Key.
+from config import api_key
 
 def init_raw_data_table(cur):
     # Create a table in the SQL Database to store
@@ -20,10 +19,10 @@ def init_raw_data_table(cur):
             )
         ''')
 
-def ask_for_a_number():
+def request_number():
     # Make a request to ChatGPT throught it's API 
     # asking for a number to get back it's response.
-    openai.api_key = get_api_key()
+    openai.api_key = api_key
     api_response = openai.ChatCompletion.create(
                 model = 'gpt-3.5-turbo',
                 messages = [ 
@@ -33,15 +32,36 @@ def ask_for_a_number():
             )
     return api_response.to_dict_recursive()['choices'][0]['message']['content']
     
-def collect_a_data_point(cur):
+def retrieve_data_point(cur):
     # A single data point gets collected and stored in the DB.
-    raw_response = ask_for_a_number()
+    raw_response = request_number()
     print(raw_response)
     cur.execute('INSERT INTO Responses (response) VALUES ( ? )', ( raw_response, ))
     return raw_response
 
+def input_getter():
+    while True:
+        try: 
+            n = input("How many data points to collect? ")
+        except KeyboardInterrupt:
+            print('\nUser Interrupt.')
+            exit()
+        if n == 'q' : exit()
+        try:
+            n = int(n)
+        except:
+            print('Unexpected input. Try again.')
+            continue
+        if n < 0: 
+            print('..invalid input. Give a non-negatige number.')
+            continue
+        else:
+            break
+    return n
 
-def get_raw_data(n):
+def retrieve_raw_data():
+    # Ask user for the size of the sample 
+    n = input_getter()
     # Init Connection to SQLite DB
     conn = sqlite3.connect('./data/rawdb.sqlite')
     cur = conn.cursor()
@@ -50,14 +70,13 @@ def get_raw_data(n):
     # Collect n data points
     for i in range(n):
         try:
-            collect_a_data_point(cur)
+            retrieve_data_point(cur)
+        except KeyboardInterrupt:
+            print('\nUser Interrupt.')
+            exit()
         except:
-            time.sleep(60)
+            sleep(60)
         conn.commit()
     # Close Connection to SQLite3
     conn.close()
-
-
-
-get_raw_data(5)
 
