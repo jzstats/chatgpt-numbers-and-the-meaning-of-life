@@ -169,6 +169,8 @@ The following figure displays the top 50 most frequently occuring numbers.
 The size of each number is directly analogous 
 to the relative frequency of each number. 
 
+![image](./chatgpt_50_most_frequent_numbers.png)
+
 
 ### Worth mentioning
 
