@@ -1,24 +1,51 @@
 # ChatGPT, Numbers and the Meaning of Life!  
 
-What is the 'favorite' number of ChatGPT? 
+What is the 'favorite' number of ChatGPT?  
 
-This question is in the core of this project.
+This question is in the core of this project.  
 
-## Prologue
+---
+
+## Contents {#Contents}
+
+- [Contents](#Contents)
+- [Prologue](#Prologue)
+- [Synopsis](#Synopsis)
+- [Process](#Process)
+    - [Retrieving Raw Data][#retrieving-raw-data]
+    - [Processing Raw Data](#processing-raw-data)
+        - [Overview](#processing-raw-data-overview)
+        - [Details](#processing-raw-data-details)
+        - [Attention](#processing-raw-data-attention)
+    - [Summarizing the Results](#summarizing-the-results)
+        - [Overview](#summarizing-the-results-overview)
+    - [Visualizing the Results](#visualizing-the-results)
+        - [Disclaimer](#visualizing-the-results-disclaimer)
+- [Results](#results)
+    - [ChatGPT's Favorite Number](#results-top-1)
+    - [Top 5 most frequently occuring numbers](#results-top-5)
+    - [Top 50 most frequently occuring numbers](#results-top-50)
+- [Nerd Mythology and Fun!](#nerd-mythology-and-fun)
+- [A Thank You to Vaggos](#a-thank-you-to-vaggos)
+- [References](#references)
+
+## Prologue {#prologue}
 
 I was wondering what biases may be revealed by an exploration 
 of the most frequently occuring numbers from ChatGPT agent, 
 and indeed there are some strong ones in favor of certain numbers.
 
-It is fine to jump directly to the 'Results'
-or even (better!) to 'Nerd Mythology and Fun' 
-if you are not interested in the technical details.
+It is fine to jump directly to the [Results](#results)
+or even (better!) to [Nerd Mythology and Fun](#nerd-mythology-and-fun) 
+**if you are not interested in the technical details**.
 
 And may you find the result quite amusing too!
 
+[back to Contents](#contents)
+
 <br>
 
-## Synopsis
+## Synopsis {#synopsis}
 
 10000 responses were collected from the ChatGPT's API.
 In each iteration the agent was requested to 'give a number' 
@@ -29,11 +56,17 @@ and the values got stored in another database.
 
 Finally the results were summarized and visualized.
 
+[back to Contents](#contents)
+
 <br>
 
-## Process
+## Process {#process}
 
-### Retrieving the Raw Data
+The process can be thought as four major
+
+[back to Contents](#contents)
+
+### Retrieving the Raw Data {#retrieving-raw-data}
 
 The script 'retrieve_raw_data.py' was used to collect the data.
 When it runs, it asks the user for the number of raw responses that should be gathered.
@@ -52,11 +85,17 @@ which is my personal one!)
 At each iteration the raw response get's stored 
 as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
-### Cleaning the Raw Data
+[back to Process](#process)
+[back to Contents](#contents)
+
+### Processing the Raw Data {#processing-raw-data}
 
 The script 'prossess_raw_data.py' was used to process the data.
 
-#### Overview
+[back to Process](#process)
+[back to Contents](#contents)
+
+#### Overview {#processing-raw-data-overview}
 
 The raw responses (that were gathered in the previous phase),
 needed to be processed as the agent returned them in various non-standard formats.
@@ -64,7 +103,11 @@ needed to be processed as the agent returned them in various non-standard format
 The responses got cleaned and the number of each response was extracted
 and got stored in another SQL Lite DB.
 
-#### Details  
+[back to Processing the Raw Data](#processing-raw-data)
+[back to Process](#process)
+[back to Contents](#contents)
+
+#### Details {#processing-raw-data-details}
 
 Most of the numbers were in a good format, 
 meaning that they contained just a positive integer number.
@@ -88,8 +131,11 @@ Only one floating point number occured, pi which was given in
 variations of decimal digits. It was decided to round it to 2 
 so that all cases will correctly count as 3.14.
 
+[back to Processing the Raw Data](#processing-raw-data)
+[back to Process](#process)
+[back to Contents](#contents)
 
-#### Attension
+#### Attension {#processing-raw-data-attention}
 
 The cleaning phase is not fully robust, as the process may fail 
 if one uses the script 'retrieve_raw_data.py 'to collect new data. 
@@ -103,14 +149,25 @@ and creates a new one from the 'rawdb.sqlite' DB. Care!
 It is suggested to comment out the relevant line from 'main.py'
 once you have the raw data processed.
 
-### Summarizing the Results
+[back to Processing the Raw Data](#processing-raw-data)
+[back to Process](#process)
+[back to Contents](#contents)
+
+### Summarizing the Results {#summarizing-the-results}
 
 The script 'summarize_results.py' was used to summarize the results.
+
+[back to Process](#process)
+[back to Contents](#contents)
 
 #### Overview
 
 The results were summarized in order to identify those numbers 
 that occurred more often as well as their frequency.
+
+[back to Summarizing the Results](#summarizing-the-results)
+[back to Process](#process)
+[back to Contents](#contents)
 
 ### Visuallizing the Results
 
@@ -124,6 +181,9 @@ using the file 'wordcloud.htm',
 that can be opened in the browser to 
 visually examine the top 50 most frequently occuring numbers.
 
+[back to Process](#process)
+[back to Contents](#contents)
+
 #### Disclaimer
 
 These three scripts that were used for the visuallization, 
@@ -135,19 +195,28 @@ files:
 from the repo:
 > https://github.com/...
 
+[back to Visualizing the Results](#visualizing-the-results)
+[back to Process](#process)
+[back to Contents](#contents)
+
 <br>
 
-## Results
+## Results {#results}
 
 The most frequently occuring, the top 5 and the top 50 numbers 
 are presented along with their frequency from a sample of 10000 observations.
 
-### ChatGPT's Favorite Number
+[back to Contents](#contents)
+
+### ChatGPT's Favorite Number {#resutls-top-1}
 
 ChatGPT's favorite number is.. 42!! 
 It was returned of 21.69% times out of the 10000 requests.
 
-### Top 5 most frequently occuring numbers
+[back to Results](#results)
+[back to Contents](#contents)
+
+### Top 5 most frequently occuring numbers {#results-top-5}
 
 The five most frequently occuring numbers, aggregated,
 constitute 52.48% of the sample with 10000 observations.
@@ -160,7 +229,10 @@ Specifically:
 4. The number 27 occured 5.45% of times.  
 5. The number 13 occured 5.28% of times.  
 
-### Top 50 most frequently occuring numbers
+[back to Results](#results)
+[back to Contents](#contents)
+
+### Top 50 most frequently occuring numbers {results-top-50}
 
 The following numbers are the 50 most frequently occuring:
 
@@ -234,7 +306,12 @@ Finally the following table displays the relative frequency of each number.
 |69     | 0.26         |
 |3      | 0.25         |
 
-## Nerd Mythology and Fun!
+[back to Results](#results)
+[back to Contents](#contents)
+
+<br> 
+
+## Nerd Mythology and Fun! {#nerd-mythology-and-fun}
 
 ..42!! Really 42..
 
@@ -253,11 +330,21 @@ giving this iconic number back in such frequency makes the imagination tick.
 Does the bot hides something?? Is it some code for his fellow bots or a message for humanity?
 For sure a decent 'Black Mirror' episode could be made out of this! 
 
+[back to Contents](#contents)
+
 <br>
 
-## A Thank You to Vaggos!
+## A Thank You to Vaggos! {#a-thank-you-to-vaggos}
 
 My friend who knew and brought to my aweraness the story around 42.
 
-## 
+[back to Contents](#contents)
 
+<br>
+
+## References {#references}
+
+
+[back to Contents](#contents)
+
+<br>
