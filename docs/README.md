@@ -161,7 +161,7 @@ that occurred more often as well as their frequency.
 [back to Process](#process)  
 [back to Contents](#contents)  
 
-### Visuallizing the Results
+### Visuallizing the Results {#visualizing-the-results}
 
 The script 'visualize_results' was used to visuallize the results,
 which takes into acount the occurances of each number 
