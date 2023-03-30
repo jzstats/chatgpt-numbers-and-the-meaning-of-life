@@ -6,13 +6,6 @@ This question is in the core of this project.
 
 ## Prologue
 
-This project is the fruit I ripped from the 5th and final course: 
-'Capstone: Retrieving, Processing and Visualizing Data with Python' 
-from 'Python for Everybode' specialization by the 'University of Michigan' on Coursera.
-
-The course ( which is great, take it! ) 
-is taught by ...
-
 I was wondering what biases may be revealed by an exploration 
 of the most frequently occuring numbers from ChatGPT agent, 
 and indeed there are some strong ones in favor of certain numbers.
@@ -171,10 +164,6 @@ to the relative frequency of each number.
 
 ![image](./chatgpt_50_most_frequent_numbers.png)
 
-
-### Worth mentioning
-
-<br>
 
 ## Nerd Mythology and Fun!
 
