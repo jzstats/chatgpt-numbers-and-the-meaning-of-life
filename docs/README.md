@@ -8,11 +8,11 @@ This question is in the core of this project.
 
 ## Contents {#contents}
 
-- [Contents](#Contents)
-- [Prologue](#Prologue)
-- [Synopsis](#Synopsis)
-- [Process](#Process)
-    - [Retrieving Raw Data][#retrivieving-the-raw-data]
+- [Contents](#contents)
+- [Prologue](#prologue)
+- [Synopsis](#synopsis)
+- [Process](#process)
+    - [Retrieving Raw Data](#retrivieving-the-raw-data)
     - [Processing Raw Data](#processing-the-raw-data)
         - [Overview](#processing-the-raw-data-overview)
         - [Details](#processing-the-raw-data-details)
@@ -328,6 +328,7 @@ My friend who knew and brought to my aweraness the story around 42.
 
 ## References {#references}
 
+Python Software Foundation. Python Language Reference, version 2.7. Available at http://www.python.org
 
 [back to Contents](#contents)
 
