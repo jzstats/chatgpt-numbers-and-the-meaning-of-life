@@ -203,7 +203,7 @@ are presented along with their frequency from a sample of 10000 observations.
 
 [back to Contents](#contents)   
 
-### ChatGPT's Favorite Number {#resutls-top-1}
+### ChatGPT's Favorite Number {#results-top-1}
 
 ChatGPT's favorite number is.. 42!! 
 It was returned of 21.69% times out of the 10000 requests.
