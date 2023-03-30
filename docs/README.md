@@ -6,17 +6,17 @@ This question is in the core of this project.
 
 ---
 
-## Contents {#Contents}
+## Contents {#contents}
 
 - [Contents](#Contents)
 - [Prologue](#Prologue)
 - [Synopsis](#Synopsis)
 - [Process](#Process)
-    - [Retrieving Raw Data][#retrieving-raw-data]
-    - [Processing Raw Data](#processing-raw-data)
-        - [Overview](#processing-raw-data-overview)
-        - [Details](#processing-raw-data-details)
-        - [Attention](#processing-raw-data-attention)
+    - [Retrieving Raw Data][#retrivieving-the-raw-data]
+    - [Processing Raw Data](#processing-the-raw-data)
+        - [Overview](#processing-the-raw-data-overview)
+        - [Details](#processing-the-raw-data-details)
+        - [Attention](#processing-the-raw-data-attention)
     - [Summarizing the Results](#summarizing-the-results)
         - [Overview](#summarizing-the-results-overview)
     - [Visualizing the Results](#visualizing-the-results)
@@ -64,9 +64,7 @@ Finally the results were summarized and visualized.
 
 The process can be thought as four major
 
-[back to Contents](#contents)
-
-### Retrieving the Raw Data {#retrieving-raw-data}
+### Retrieving the Raw Data {#retrivieving-the-raw-data}
 
 The script 'retrieve_raw_data.py' was used to collect the data.
 When it runs, it asks the user for the number of raw responses that should be gathered.
@@ -86,16 +84,12 @@ At each iteration the raw response get's stored
 as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
 [back to Process](#process)
-[back to Contents](#contents)
 
-### Processing the Raw Data {#processing-raw-data}
+### Processing the Raw Data {#processing-the-raw-data}
 
 The script 'prossess_raw_data.py' was used to process the data.
 
-[back to Process](#process)
-[back to Contents](#contents)
-
-#### Overview {#processing-raw-data-overview}
+#### Overview {#processing-the-raw-data-overview}
 
 The raw responses (that were gathered in the previous phase),
 needed to be processed as the agent returned them in various non-standard formats.
@@ -103,11 +97,10 @@ needed to be processed as the agent returned them in various non-standard format
 The responses got cleaned and the number of each response was extracted
 and got stored in another SQL Lite DB.
 
-[back to Processing the Raw Data](#processing-raw-data)
-[back to Process](#process)
-[back to Contents](#contents)
+[back to Processing the Raw Data](#processing-the-raw-data)  
+[back to Process](#process)  
 
-#### Details {#processing-raw-data-details}
+#### Details {#processing-the-raw-data-details}
 
 Most of the numbers were in a good format, 
 meaning that they contained just a positive integer number.
@@ -131,11 +124,10 @@ Only one floating point number occured, pi which was given in
 variations of decimal digits. It was decided to round it to 2 
 so that all cases will correctly count as 3.14.
 
-[back to Processing the Raw Data](#processing-raw-data)
-[back to Process](#process)
-[back to Contents](#contents)
+[back to Processing the Raw Data](#processing-the-raw-data)  
+[back to Process](#process)  
 
-#### Attension {#processing-raw-data-attention}
+#### Attension {#processing-the-raw-data-attention}
 
 The cleaning phase is not fully robust, as the process may fail 
 if one uses the script 'retrieve_raw_data.py 'to collect new data. 
@@ -149,25 +141,25 @@ and creates a new one from the 'rawdb.sqlite' DB. Care!
 It is suggested to comment out the relevant line from 'main.py'
 once you have the raw data processed.
 
-[back to Processing the Raw Data](#processing-raw-data)
-[back to Process](#process)
-[back to Contents](#contents)
+[back to Processing the Raw Data](#processing-the-raw-data)  
+[back to Process](#process)  
+[back to Contents](#contents)  
 
 ### Summarizing the Results {#summarizing-the-results}
 
 The script 'summarize_results.py' was used to summarize the results.
 
-[back to Process](#process)
-[back to Contents](#contents)
+[back to Process](#process)  
+[back to Contents](#contents)  
 
-#### Overview
+#### Overview {#summarizing-the-results-overview}
 
 The results were summarized in order to identify those numbers 
 that occurred more often as well as their frequency.
 
-[back to Summarizing the Results](#summarizing-the-results)
-[back to Process](#process)
-[back to Contents](#contents)
+[back to Summarizing the Results](#summarizing-the-results)  
+[back to Process](#process)  
+[back to Contents](#contents)  
 
 ### Visuallizing the Results
 
@@ -181,10 +173,10 @@ using the file 'wordcloud.htm',
 that can be opened in the browser to 
 visually examine the top 50 most frequently occuring numbers.
 
-[back to Process](#process)
-[back to Contents](#contents)
+[back to Process](#process)  
+[back to Contents](#contents)  
 
-#### Disclaimer
+#### Disclaimer {#visualizing-the-results-disclaimer}
 
 These three scripts that were used for the visuallization, 
 were taken almost as is from contents of the courses and correspond to the 
@@ -195,9 +187,9 @@ files:
 from the repo:
 > https://github.com/...
 
-[back to Visualizing the Results](#visualizing-the-results)
-[back to Process](#process)
-[back to Contents](#contents)
+[back to Visualizing the Results](#visualizing-the-results)  
+[back to Process](#process)  
+[back to Contents](#contents)  
 
 <br>
 
@@ -206,15 +198,10 @@ from the repo:
 The most frequently occuring, the top 5 and the top 50 numbers 
 are presented along with their frequency from a sample of 10000 observations.
 
-[back to Contents](#contents)
-
 ### ChatGPT's Favorite Number {#resutls-top-1}
 
 ChatGPT's favorite number is.. 42!! 
 It was returned of 21.69% times out of the 10000 requests.
-
-[back to Results](#results)
-[back to Contents](#contents)
 
 ### Top 5 most frequently occuring numbers {#results-top-5}
 
@@ -229,10 +216,7 @@ Specifically:
 4. The number 27 occured 5.45% of times.  
 5. The number 13 occured 5.28% of times.  
 
-[back to Results](#results)
-[back to Contents](#contents)
-
-### Top 50 most frequently occuring numbers {results-top-50}
+### Top 50 most frequently occuring numbers {#results-top-50}
 
 The following numbers are the 50 most frequently occuring:
 
