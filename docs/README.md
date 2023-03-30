@@ -8,26 +8,26 @@ This question is in the core of this project.
 
 ## Contents {#contents}
 
-- [Contents](#contents)
-- [Prologue](#prologue)
-- [Synopsis](#synopsis)
-- [Process](#process)
-    - [Retrieving Raw Data](#retrivieving-the-raw-data)
-    - [Processing Raw Data](#processing-the-raw-data)
-        - [Overview](#processing-the-raw-data-overview)
-        - [Details](#processing-the-raw-data-details)
-        - [Attention](#processing-the-raw-data-attention)
-    - [Summarizing the Results](#summarizing-the-results)
-        - [Overview](#summarizing-the-results-overview)
-    - [Visualizing the Results](#visualizing-the-results)
-        - [Disclaimer](#visualizing-the-results-disclaimer)
-- [Results](#results)
-    - [ChatGPT's Favorite Number](#results-top-1)
-    - [Top 5 most frequently occuring numbers](#results-top-5)
-    - [Top 50 most frequently occuring numbers](#results-top-50)
-- [Nerd Mythology and Fun!](#nerd-mythology-and-fun)
-- [A Thank You to Vaggos](#a-thank-you-to-vaggos)
-- [References](#references)
+- [Contents](#contents)  
+- [Prologue](#prologue)  
+- [Synopsis](#synopsis)  
+- [Process](#process)  
+    - [Retrieving Raw Data](#retrivieving-the-raw-data)  
+    - [Processing Raw Data](#processing-the-raw-data)  
+        - [Overview](#processing-the-raw-data-overview)  
+        - [Details](#processing-the-raw-data-details)  
+        - [Attention](#processing-the-raw-data-attention)   
+    - [Summarizing the Results](#summarizing-the-results)  
+        - [Overview](#summarizing-the-results-overview)  
+    - [Visualizing the Results](#visualizing-the-results)  
+        - [Disclaimer](#visualizing-the-results-disclaimer)  
+- [Results](#results)   
+    - [ChatGPT's Favorite Number](#results-top-1)   
+    - [Top 5 most frequently occuring numbers](#results-top-5)  
+    - [Top 50 most frequently occuring numbers](#results-top-50)  
+- [Nerd Mythology and Fun!](#nerd-mythology-and-fun)   
+- [A Thank You to Vaggos](#a-thank-you-to-vaggos)  
+- [References](#references)  
 
 ## Prologue {#prologue}
 
@@ -192,7 +192,7 @@ from the repo:
 
 [back to Visualizing the Results](#visualizing-the-results)  
 [back to Process](#process)  
-[back to Contents](#contents)  
+[back to Contents](#contents)    
 
 <br>
 
@@ -201,15 +201,15 @@ from the repo:
 The most frequently occuring, the top 5 and the top 50 numbers 
 are presented along with their frequency from a sample of 10000 observations.
 
-[back to Contents](#contents)
+[back to Contents](#contents)   
 
 ### ChatGPT's Favorite Number {#resutls-top-1}
 
 ChatGPT's favorite number is.. 42!! 
 It was returned of 21.69% times out of the 10000 requests.
 
-[back to Results](#results)
-[back to Contents](#contents)
+[back to Results](#results)  
+[back to Contents](#contents)  
 
 ### Top 5 most frequently occuring numbers {#results-top-5}
 
@@ -224,8 +224,8 @@ Specifically:
 4. The number 27 occured 5.45% of times.  
 5. The number 13 occured 5.28% of times.  
 
-[back to Results](#results)
-[back to Contents](#contents)
+[back to Results](#results)  
+[back to Contents](#contents)  
 
 ### Top 50 most frequently occuring numbers {#results-top-50}
 
@@ -301,8 +301,8 @@ Finally the following table displays the relative frequency of each number.
 |69     | 0.26         |
 |3      | 0.25         |
 
-[back to Results](#results)
-[back to Contents](#contents)
+[back to Results](#results)  
+[back to Contents](#contents)  
 
 <br> 
 
@@ -325,7 +325,7 @@ giving this iconic number back in such frequency makes the imagination tick.
 Does the bot hides something?? Is it some code for his fellow bots or a message for humanity?
 For sure a decent 'Black Mirror' episode could be made out of this! 
 
-[back to Contents](#contents)
+[back to Contents](#contents)  
 
 <br>
 
@@ -333,7 +333,7 @@ For sure a decent 'Black Mirror' episode could be made out of this!
 
 My friend who knew and brought to my aweraness the story around 42.
 
-[back to Contents](#contents)
+[back to Contents](#contents)  
 
 <br>
 
@@ -341,6 +341,6 @@ My friend who knew and brought to my aweraness the story around 42.
 
 Python Software Foundation. Python Language Reference, version 2.7. Available at http://www.python.org
 
-[back to Contents](#contents)
+[back to Contents](#contents)  
 
 <br>
