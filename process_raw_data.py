@@ -51,7 +51,6 @@ def process_raw_data():
     if n_responses < 1:
         print("There are no numbers to clean.")
     else:
-        print("There are " + n_responses + " numbers to clean.")
         cur_2.execute("SELECT response FROM Responses")
         for i in range(n_responses):
             raw_response = cur_2.fetchone()[0]
@@ -62,8 +61,9 @@ def process_raw_data():
             print(number)
             # Insert number to DB and commit changes
             cur_1.execute('INSERT INTO Numbers (number) VALUES ( ? )', ( number, ))
-            conn_1.commit()
 
+        print("There were " + str(n_responses) + " numbers that got process.\n")
+        conn_1.commit()
         conn_1.close()
         conn_2.close()
     return True
