@@ -164,16 +164,16 @@ Specifically:
 
 The following numbers are the 50 most frequently occuring:
 
->  3.14
+>  3.14  
 >  3,  4,  5,  6,  7,  8,  9,  
-> 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-> 20, 21, 22, 23, 24, 25, 26, 27, 28, 
-> 32, 33, 34, 37, 42, 43, 47, 
-> 53, 54, 56, 57, 
-> 63, 64, 67, 69, 
-> 72, 73, 74, 76, 77, 
+> 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,  
+> 20, 21, 22, 23, 24, 25, 26, 27, 28,   
+> 32, 33, 34, 37, 42, 43, 47,  
+> 53, 54, 56, 57,  
+> 63, 64, 67, 69,  
+> 72, 73, 74, 76, 77,  
 > 83, 84, 87
-
+ 
 The following figure displays them with size proportianal
 to the relative frequency of each number. 
 
