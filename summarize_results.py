@@ -68,13 +68,13 @@ def present_summary(summary):
     print("Out of " + str(n) + " numbers: ")
     aggr_perc = 0
     for k, v in summary.items():
-        if top_n < 0: break
+        if top_n < 1: break
         top_n = top_n - 1
         perc = round(float(v)/n*100, 2)
         aggr_perc = aggr_perc + perc
-        print(str(k) + " occured " + str(perc) + "% of times")
+        print('\t' + str(k) + " occured " + str(perc) + "% of times")
 
-    print('\n' + 'Aggregated the  numbers cover ' + str(round(aggr_perc,2)) + '% of all observations.')
+    print('Aggregated the above most frequent numbers cover ' + str(round(aggr_perc,2)) + '% of all observations.\n')
     return aggr_perc
 
 
