@@ -16,7 +16,7 @@ def main():
     # to standarize response values and extract the numbers
     # ATTENTION: Deletes the DB 'numbersdb.sqlite' if it exists
     #            and recreates it from contents of 'rawdb.sqlite'
-    #process_raw_data()
+    process_raw_data()
 
     # Summarize Results
     summarize_results()
