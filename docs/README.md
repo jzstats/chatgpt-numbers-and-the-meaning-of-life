@@ -144,25 +144,95 @@ are presented along with their frequency from a sample of 10000 observations.
 
 ### ChatGPT's Favorite Number
 
-ChatGPT's favorite number is... 42!! 
-It was returned ... times out of the 10000 requests.
+ChatGPT's favorite number is.. 42!! 
+It was returned of 21.69% times out of the 10000 requests.
 
 ### Top 5 most frequently occuring numbers
 
-The five most frequently occuring numbers were observed ...
-out of a 10000 responses
+The five most frequently occuring numbers, aggregated,
+constitute 52.48% of the sample with 10000 observations.
 
-Specifically
+Specifically:
 
+1. The number 42 occured 21.69% of times.  
+2. The number 7 occured 13.91% of times.  
+3. The number 17 occured 6.15% of times.  
+4. The number 27 occured 5.45% of times.  
+5. The number 13 occured 5.28% of times.  
 
 ### Top 50 most frequently occuring numbers
 
-The following figure displays the top 50 most frequently occuring numbers.
-The size of each number is directly analogous 
+The following numbers are the 50 most frequently occuring:
+
+>  3.14
+>  3,  4,  5,  6,  7,  8,  9,  
+> 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+> 20, 21, 22, 23, 24, 25, 26, 27, 28, 
+> 32, 33, 34, 37, 42, 43, 47, 
+> 53, 54, 56, 57, 
+> 63, 64, 67, 69, 
+> 72, 73, 74, 76, 77, 
+> 83, 84, 87
+
+The following figure displays them with size proportianal
 to the relative frequency of each number. 
 
 ![image](./chatgpt_50_most_frequent_numbers.png)
 
+Finally the following table displays the relative frequency of each number. 
+
+|Number | Frequency (%)|
+|-------|--------------|
+|42     |21.69         |
+|7      |13.91         |
+|17     | 6.15         |
+|27     | 5.45         |
+|13     | 5.28         |
+|37     | 3.37         | 
+|23     | 2.94         |
+|8      | 2.48         |
+|9      | 2.44         |
+|47     | 2.07         |
+|5      | 1.62         |
+|14     | 1.49         |
+|73     | 1.44         |
+|10     | 1.31         |
+|57     | 1.29         |
+|12     | 1.27         |
+|25     | 1.09         |
+|15     | 1.09         |
+|21     | 0.87         |
+|6      | 0.83         |
+|77     | 0.73         |
+|24     | 0.73         |
+|3.14   | 0.72         |
+|87     | 0.69         |
+|16     | 0.63         |
+|4      | 0.63         |
+|22     | 0.62         |
+|11     | 0.59         |
+|67     | 0.53         |
+|18     | 0.48         |
+|26     | 0.48         |
+|64     | 0.47         |
+|33     | 0.45         |
+|32     | 0.44         |
+|63     | 0.43         |
+|56     | 0.43         |
+|72     | 0.43         |
+|83     | 0.36         |
+|43     | 0.35         |
+|54     | 0.34         |
+|28     | 0.33         |
+|19     | 0.31         |
+|20     | 0.30         |
+|76     | 0.29         |
+|84     | 0.29         |
+|53     | 0.28         |
+|34     | 0.28         |
+|74     | 0.26         |
+|69     | 0.26         |
+|3      | 0.25         |
 
 ## Nerd Mythology and Fun!
 
@@ -190,13 +260,4 @@ For sure a decent 'Black Mirror' episode could be made out of this!
 My friend who knew and brought to my aweraness the story around 42.
 
 ## 
-
-
-
-
-
-
-
-
-
 
