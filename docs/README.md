@@ -12,7 +12,7 @@ This question is in the core of this project.
 - [Prologue](#prologue)  
 - [Synopsis](#synopsis)  
 - [Process](#process)  
-  - [Retrieving Raw Data](#retrivieving-the-raw-data)  
+  - [Retrieving Raw Data](#retrieving-the-raw-data)  
   - [Processing Raw Data](#processing-the-raw-data)  
     - [Overview](#processing-the-raw-data-overview)  
     - [Details](#processing-the-raw-data-details)  
@@ -64,7 +64,7 @@ Finally the results were summarized and visualized.
 
 The process can be thought as four major
 
-### Retrieving the Raw Data {#retrivieving-the-raw-data}
+### Retrieving the Raw Data {#retrieving-the-raw-data}
 
 The script 'retrieve_raw_data.py' was used to collect the data.
 When it runs, it asks the user for the number of raw responses that should be gathered.
@@ -83,7 +83,7 @@ which is my personal one!)
 At each iteration the raw response get's stored 
 as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
-[back to Process](#process)
+[back to Process](#process)  
 [back to Contents](#contents)  
 
 ### Processing the Raw Data {#processing-the-raw-data}
