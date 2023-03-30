@@ -22,13 +22,12 @@ And may you find the result quite amusing too!
 
 10000 responses were collected from the ChatGPT's API.
 In each iteration the agent was requested to 'give a number' 
-and the raw responses were collected and stored in a database.
+and the raw response was collected and stored in a database.
 
-The raw data was then processed 
-in order to extract the number from the response 
-and the value got stored in another database.
+The raw data was then processed in order to extract the numbers
+and the values got stored in another database.
 
-Finally the results were summarized and visualized
+Finally the results were summarized and visualized.
 
 <br>
 
@@ -44,7 +43,7 @@ To achieve it, it communicates with the ChatGPT through the available API.
 It is required for the user to already have access to the API 
 and to put his API key in a file called 'config.py' 
 which will contain one line:
-> api_key = <the-api-key-of-the-user>
+> api_key = \<the-api-key-of-the-user\\>
 
 (this file was not included in the repo 
 to hide the API key used for the project, 
@@ -55,7 +54,7 @@ as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
 ### Cleaning the Raw Data
 
-The script 'prossess_raw_data.py' was used to collect the data.
+The script 'prossess_raw_data.py' was used to process the data.
 
 #### Overview
 
@@ -80,14 +79,14 @@ Also very frequently the numbers were accompanied by some text
 from which they needed to got extracted.
 
 In one case the number 12 was return as text, 'twelve',
-which got converted to 
+which got converted to the number 12.
 
 One response contained 3 numbers, from which only the first got counted as valid
 and ectracted.
 
 Only one floating point number occured, pi which was given in 
 variations of decimal digits. It was decided to round it to 2 
-so that all will correctly count as 3.14 for all cases.
+so that all cases will correctly count as 3.14.
 
 
 #### Attension
@@ -108,7 +107,7 @@ once you have the raw data processed.
 
 The script 'summarize_results.py' was used to summarize the results.
 
-# Overview
+#### Overview
 
 The results were summarized in order to identify those numbers 
 that occurred more often as well as their frequency.
@@ -171,7 +170,7 @@ to the relative frequency of each number.
 
 Although there is no doupt that the agent is of narrow intelligence, 
 giving back this number is quite funny if one takes into account the 
-classic novel 'Hitchkoc's Guide to the Galaxy' according to which..
+classic novel 'HitchHikers's Guide to the Galaxy' according to which..
 
 .. SPOILER ALERT ..
 
