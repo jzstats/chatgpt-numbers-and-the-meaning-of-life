@@ -84,6 +84,7 @@ At each iteration the raw response get's stored
 as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
 [back to Process](#process)
+[back to Contents](#contents)  
 
 ### Processing the Raw Data {#processing-the-raw-data}
 
@@ -99,6 +100,7 @@ and got stored in another SQL Lite DB.
 
 [back to Processing the Raw Data](#processing-the-raw-data)  
 [back to Process](#process)  
+[back to Contents](#contents)  
 
 #### Details {#processing-the-raw-data-details}
 
@@ -126,6 +128,7 @@ so that all cases will correctly count as 3.14.
 
 [back to Processing the Raw Data](#processing-the-raw-data)  
 [back to Process](#process)  
+[back to Contents](#contents)  
 
 #### Attension {#processing-the-raw-data-attention}
 
@@ -198,10 +201,15 @@ from the repo:
 The most frequently occuring, the top 5 and the top 50 numbers 
 are presented along with their frequency from a sample of 10000 observations.
 
+[back to Contents](#contents)
+
 ### ChatGPT's Favorite Number {#resutls-top-1}
 
 ChatGPT's favorite number is.. 42!! 
 It was returned of 21.69% times out of the 10000 requests.
+
+[back to Results](#results)
+[back to Contents](#contents)
 
 ### Top 5 most frequently occuring numbers {#results-top-5}
 
@@ -215,6 +223,9 @@ Specifically:
 3. The number 17 occured 6.15% of times.  
 4. The number 27 occured 5.45% of times.  
 5. The number 13 occured 5.28% of times.  
+
+[back to Results](#results)
+[back to Contents](#contents)
 
 ### Top 50 most frequently occuring numbers {#results-top-50}
 
