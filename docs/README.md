@@ -166,13 +166,14 @@ that occurred more often as well as their frequency.
 
 ### Visuallizing the Results {#visualizing-the-results}
 
-The script 'visualize_results' was used to visuallize the results,
+The script 'visualize_results.py' was used to visuallize the results,
 which takes into acount the occurances of each number 
 and produces the normalized sizes of the numbers 
 that got stored in the file 'wordcloud.js'.
 
 Then the numbers get plotted in wordcloud,
-using the file 'wordcloud.htm', 
+powered by the JavaScript library d3.js,
+using the script 'wordcloud.htm', 
 that can be opened in the browser to 
 visually examine the top 50 most frequently occuring numbers.
 
@@ -181,14 +182,14 @@ visually examine the top 50 most frequently occuring numbers.
 
 #### Disclaimer {#visualizing-the-results-disclaimer}
 
-These three scripts that were used for the visuallization, 
-were taken almost as is from contents of the courses and correspond to the 
-
-files:  
-1. 
+These two scripts that were used for the visuallization, 
+were taken almost as is from contents of the courses 
+and correspond to the files:  
+1. 'visualize_results.py' to 'code3/gmane/gword.py'
+2. 'wordcloud.htm' to 'code3/gmane/gword.htm'
 
 from the repo:
-> https://github.com/...
+> https://github.com/csev/py4e
 
 [back to Visualizing the Results](#visualizing-the-results)  
 [back to Process](#process)  
@@ -235,12 +236,16 @@ The following numbers are the 50 most frequently occuring:
 >  3,  4,  5,  6,  7,  8,  9,  
 > 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,  
 > 20, 21, 22, 23, 24, 25, 26, 27, 28,   
-> 32, 33, 34, 37, 42, 43, 47,  
+> 32, 33, 34, 37,  
+> 42, 43, 47,  
 > 53, 54, 56, 57,  
 > 63, 64, 67, 69,  
 > 72, 73, 74, 76, 77,  
 > 83, 84, 87
  
+Aggregated they occurred 91.46% of times 
+out of the 10000 observations.  
+
 The following figure displays them with size proportianal
 to the relative frequency of each number. 
 
@@ -248,58 +253,58 @@ to the relative frequency of each number.
 
 Finally the following table displays the relative frequency of each number. 
 
-|Number | Frequency (%)|
-|-------|--------------|
-|42     |21.69         |
-|7      |13.91         |
-|17     | 6.15         |
-|27     | 5.45         |
-|13     | 5.28         |
-|37     | 3.37         | 
-|23     | 2.94         |
-|8      | 2.48         |
-|9      | 2.44         |
-|47     | 2.07         |
-|5      | 1.62         |
-|14     | 1.49         |
-|73     | 1.44         |
-|10     | 1.31         |
-|57     | 1.29         |
-|12     | 1.27         |
-|25     | 1.09         |
-|15     | 1.09         |
-|21     | 0.87         |
-|6      | 0.83         |
-|77     | 0.73         |
-|24     | 0.73         |
-|3.14   | 0.72         |
-|87     | 0.69         |
-|16     | 0.63         |
-|4      | 0.63         |
-|22     | 0.62         |
-|11     | 0.59         |
-|67     | 0.53         |
-|18     | 0.48         |
-|26     | 0.48         |
-|64     | 0.47         |
-|33     | 0.45         |
-|32     | 0.44         |
-|63     | 0.43         |
-|56     | 0.43         |
-|72     | 0.43         |
-|83     | 0.36         |
-|43     | 0.35         |
-|54     | 0.34         |
-|28     | 0.33         |
-|19     | 0.31         |
-|20     | 0.30         |
-|76     | 0.29         |
-|84     | 0.29         |
-|53     | 0.28         |
-|34     | 0.28         |
-|74     | 0.26         |
-|69     | 0.26         |
-|3      | 0.25         |
+|Rank |Number | Frequency (%)|
+|-----|-------|--------------|
+|1    |42     |21.69         |
+|2    |7      |13.91         |
+|3    |17     | 6.15         |
+|4    |27     | 5.45         |
+|5    |13     | 5.28         |
+|6    |37     | 3.37         | 
+|7    |23     | 2.94         |
+|8    |8      | 2.48         |
+|9    |9      | 2.44         |
+|10   |47     | 2.07         |
+|11   |5      | 1.62         |
+|12   |14     | 1.49         |
+|13   |73     | 1.44         |
+|14   |10     | 1.31         |
+|15   |57     | 1.29         |
+|16   |12     | 1.27         |
+|17   |25     | 1.09         |
+|18   |15     | 1.09         |
+|19   |21     | 0.87         |
+|20   |6      | 0.83         |
+|21   |77     | 0.73         |
+|22   |24     | 0.73         |
+|23   |3.14   | 0.72         |
+|24   |87     | 0.69         |
+|25   |16     | 0.63         |
+|26   |4      | 0.63         |
+|27   |22     | 0.62         |
+|28   |11     | 0.59         |
+|29   |67     | 0.53         |
+|30   |18     | 0.48         |
+|31   |26     | 0.48         |
+|32   |64     | 0.47         |
+|33   |33     | 0.45         |
+|34   |32     | 0.44         |
+|35   |63     | 0.43         |
+|36   |56     | 0.43         |
+|37   |72     | 0.43         |
+|38   |83     | 0.36         |
+|39   |43     | 0.35         |
+|40   |54     | 0.34         |
+|41   |28     | 0.33         |
+|42   |19     | 0.31         |
+|43   |20     | 0.30         |
+|44   |76     | 0.29         |
+|45   |84     | 0.29         |
+|46   |53     | 0.28         |
+|47   |34     | 0.28         |
+|48   |74     | 0.26         |
+|49   |69     | 0.26         |
+|50   |3      | 0.25         |
 
 [back to Results](#results)  
 [back to Contents](#contents)  
@@ -339,7 +344,15 @@ My friend who knew and brought to my aweraness the story around 42.
 
 ## References {#references}
 
+Placeholder for reference to the py4e course and repo
+
+Placeholder for reference to the HitchHikers Guide to the Galaxy
+
 Python Software Foundation. Python Language Reference, version 3.10.10 Available at http://www.python.org
+
+Placeholder for reference to python package time
+
+Placeholder for reference to python package openai
 
 
 
