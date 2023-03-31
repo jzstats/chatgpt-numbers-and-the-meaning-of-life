@@ -52,80 +52,55 @@ Finally a GitHub Page was created to host and present the project.
 
 <br>
 
-### About the files contained in this repository
+### Usage
 
-#### docs  
-This directory contains all the files 
-that were used in order to produce and populate
-the project's GitHub Page.
+First download the files with the command
 
-#### \_\_pycache\_\_
-W.I.P.
+> git clone https://github.com/jzstats/chatgpt-numbers-and-the-meaning-of-life
 
-#### lib/python3.10/site-packages 
-W.I.P.
+and cd into the repo.
 
-#### pythonenv.cfg
-W.I.P.
- 
-#### .gitignore
-It was used to hide 'config.py' script,
-which contains my API Key that was used 
-to communicate with ChatGPT. 
+#### Reproduce my Results
 
-#### config.py (not included in the repo)
-This file contains one line with a variable named 'api_key' 
-and the value of the API Key that was used in this project.
-It gets imported by 'create_data.py' (which depends on it).
-Was not included as it contains sensitive informotion,
-but should be created if one tries to reproduce this project.
+In order to reproduce my results run the main.py file. 
 
-#### retrive_raw_data.py  
-The script which was used to retrieve the raw data. 
-It requests from ChatGPT agent through the API for a number, 
-and stores the raw response in an SQL Lite DB, called 'rawdb.sqlite'.
-Then repeats the process untill the specified number of responses is gathered.
+When it asks for the number of desired observations, 
+input 0 and you are practically done! 
 
-#### rawdb.sqlite
-An SQL Lite DB with one table which contains 
-all the raw responses from ChatGPT agent,
-without any processing.
+Next you can explore the top n results (let's say the top 50).
 
-#### process_raw_data.py
-The script that was used to process the raw data.
-It reads the table with raw data directly from the 'rawdb.sqlite',
-and process one entry at a time in order to clean and extract 
-the number from the raw response.
-Then it stores the extracted number in another DB, 
-called 'numbersdb.sqlite'.
+Finally to produce the wordcloud, 
+run the script 'visuallize_results.py' 
+and open in a the browser the file 'wordcloud.htm'
 
-#### numbersdb.sqlite
-An SQL Lite DB with one table which contains 
-all the prosseded clean data with the numbers 
-returned from ChatGPT agent. 
+Everything is expected to work smoothly, 
+and you should get the exact same result as I had.
 
-#### summarize_results.py
-This script was used to summarize the results.
-It returns the top n more frequently occuring numbers 
-and the times each of them occured.
+#### Reproduce the Experiment
 
-#### visualize_results.py
-This script is used to help produce the visualization of the results.
-It normalizes sizes for each number 
-in order to for them to appropriately get drawn
-in the 'wordcloud' graph.
+If you wish to reproduce the same experiment but with new data 
+you should first delete the 'data/rawdb.sqlite' DB.
 
-#### wordcloud.js
-This file contains the normalized sizes
-of the top 50 more frequently occuring numbers,
-and was used by 'wordcloud.htm' file to produce
-the wordcloud graph.
+Then run the script 'main.py'.
 
-#### wordcloud.htm
-This files produces a wordcloud of the top 50 
-most frequently occuring numbers. 
-It depends on the 'wordcloud.js' which contains 
-the sizes that should be used to draw each number.
+When it asks for the number of desired observations, 
+input the number of observations you want to collect. 
 
+THINGS MAY BREAK in the data processing step,
+as the cleaning and extraction is sensitive to the data 
+I had collected and it is possible that you may need to modify
+the script 'process_the_raw_data.py' to fit your data.
+It should not be that hard I think.. wish you luck!
 
+Then you can explore your results.
+
+Finally to produce the wordcloud, 
+run the script 'visuallize_results.py' 
+and open in a the browser the file 'wordcloud.htm'
+
+### FAQ
+
+#### Why the data retrieving process hangs for a minute evry 20 or 30 requests?
+
+Intentianally, to conform with what the openai's API suggests.
 
