@@ -46,7 +46,6 @@ def input_getter():
         except KeyboardInterrupt:
             print('\nUser Interrupt.')
             exit()
-        if n == 'q' : exit()
         try:
             n = int(n)
         except:
@@ -75,6 +74,10 @@ def retrieve_raw_data():
             print('\nUser Interrupt.')
             exit()
         except:
+            # When a request fails for any reason
+            # the process hangs for a minute
+            # Mainly this is to conform with the ChatGPT's API
+            # that accepts either 20 or 30 request per minute
             sleep(60)
         conn.commit()
     # Close Connection to SQLite3
