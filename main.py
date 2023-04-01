@@ -1,10 +1,10 @@
 from retrieve_raw_data import retrieve_raw_data
 from process_raw_data import process_raw_data
 from summarize_results import summarize_results
-#from visualize_results import visualize_results
 
 
 def main():
+
     # Collect Raw Data 
     # as raw responses from ChatGPT agent.
     # This process is restartable,
@@ -20,10 +20,6 @@ def main():
 
     # Summarize Results
     summarize_results()
-
-    # Visualize Results
-    #visualize_results()
-
 
 # Execute Main
 main()
