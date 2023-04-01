@@ -63,11 +63,11 @@ The process can be thought as four major
 ### Retrieving the Raw Data {#retrieving-the-raw-data}
 
 The program communicates with ChatGPT through the available API,
-and at each iteration it asks the agent to the same prompt:  
+and at each iteration it gives the agent the same prompt:  
 
 > give a number
 
-Each raw response get's stored 
+Each raw response gets stored 
 as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
 [back to Process](#process)  
