@@ -1,3 +1,4 @@
 config.py
+data/numbersdb.sqlite
 .tmuxp.yaml
 
