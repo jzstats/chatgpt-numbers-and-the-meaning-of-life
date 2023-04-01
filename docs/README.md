@@ -15,11 +15,8 @@ This question is in the core of this project.
   - [Retrieving the Raw Data](#retrieving-the-raw-data)  
   - [Processing the Raw Data](#processing-the-raw-data)  
     - [Details](#processing-the-raw-data-details)  
-    - [Attention](#processing-the-raw-data-attention)   
   - [Summarizing the Results](#summarizing-the-results)  
-    - [Overview](#summarizing-the-results-overview)  
   - [Visualizing the Results](#visualizing-the-results)  
-    - [Disclaimer](#visualizing-the-results-disclaimer)  
 - [Results](#results)   
   - [ChatGPT's Favorite Number](#results-top-1)   
   - [Top 5 most frequently occuring numbers](#results-top-5)  
@@ -81,8 +78,22 @@ as-is in an SQL Lite DB (called 'rawdb.sqlite').
 The raw responses (that were gathered in the previous phase),
 needed to be processed as the agent returned them in various non-standard formats.
 
-The responses got cleaned and the number of each response was extracted
-and got stored in another SQL Lite DB.
+The cleaning phase is not fully robust, 
+as the process is sensitive the data collected 
+and may fail when new data gets collected. 
+
+It is possible that there will be need to manually inspect the data 
+in order to identify and handle some unexpected cases
+that were not encountered in this project.
+
+At the start of the data processing pipeline
+it deletes the 'numbersdb.sqlite' DB 
+iterates through each obseresation to clean it
+before the numbers can be extracted.
+
+At the end, after data validation,
+it creates a new fresh 'numbersdb.sqlite' DB,
+from all the available data in 'rawdb.sqlite' DB. 
 
 [back to Process](#process)  
 [back to Contents](#contents)  
@@ -115,38 +126,13 @@ so that all cases will correctly count as 3.14.
 [back to Process](#process)  
 [back to Contents](#contents)  
 
-#### Attension {#processing-the-raw-data-attention}
-
-The cleaning phase is not fully robust, 
-as the process is sensitive the data collected 
-and may fail when new data gets collected. 
-
-It is possible that there will be need to manually inspect the data 
-in order to identify and handle some unexpected cases
-that were not encountered in this project.
-
-At the start of the process 
-it deletes the 'numbersdb.sqlite' DB 
-and creates a new fresh one 
-from all the available data in 'rawdb.sqlite' DB. 
-
-[back to Processing the Raw Data](#processing-the-raw-data)  
-[back to Process](#process)  
-[back to Contents](#contents)  
-
 ### Summarizing the Results {#summarizing-the-results}
 
-The script 'summarize_results.py' was used to summarize the results.
+The results were summarized 
+in order to identify the frequency of the numbers 
+that occurred more often 
+as well as their aggregated frequency.
 
-[back to Process](#process)  
-[back to Contents](#contents)  
-
-#### Overview {#summarizing-the-results-overview}
-
-The results were summarized in order to identify those numbers 
-that occurred more often as well as their frequency.
-
-[back to Summarizing the Results](#summarizing-the-results)  
 [back to Process](#process)  
 [back to Contents](#contents)  
 
