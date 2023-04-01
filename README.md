@@ -54,27 +54,44 @@ Finally a GitHub Page was created to host and present the project.
 
 ### Usage
 
-First download the files with the command
+You can either use the program to reproduce my results
+or to reproduce the experiment with new data. It's up to you!
+
+First download the files with the command:
 
 > git clone https://github.com/jzstats/chatgpt-numbers-and-the-meaning-of-life
 
 and cd into the repo.
 
+#### Requirements
+
+It is required to have a valid api key that can be used to 
+communicate with the ChatGPT's API. 
+
+Create a file called 'config.py',
+and put a line:  
+> api_key = \<the-api-key-of-the-user\\>
+
+This file will be sourced by 'main.py' when 
+it tries to retrieve the raw data.
+
+(it was not included in the repo 
+to hide the API key used for the project, 
+which is my personal one!)
+
 #### Reproduce my Results
 
-In order to reproduce my results run the main.py file. 
+In order to reproduce my results run the 'main.py' script. 
 
 When it asks for the number of desired observations, 
 input 0 and you are practically done! 
 
-Next you can explore the top n results (let's say the top 50).
+Next you can explore the top n results
+and may compare them with mine.
 
 Finally to produce the wordcloud, 
 run the script 'visuallize_results.py' 
 and open in a the browser the file 'wordcloud.htm'
-
-Everything is expected to work smoothly, 
-and you should get the exact same result as I had.
 
 #### Reproduce the Experiment
 
@@ -85,22 +102,44 @@ Then run the script 'main.py'.
 
 When it asks for the number of desired observations, 
 input the number of observations you want to collect. 
+The data retrieving process is quit slow 
+and may take from minutes to hours depending on the sample.
 
 THINGS MAY BREAK in the data processing step,
 as the cleaning and extraction is sensitive to the data 
 I had collected and it is possible that you may need to modify
-the script 'process_the_raw_data.py' to fit your data.
-It should not be that hard I think.. wish you luck!
+the script 'process_the_raw_data.py' to fit your observations.
 
-Then you can explore your results.
+Then you can explore your results and may compare them with mine.
 
 Finally to produce the wordcloud, 
 run the script 'visuallize_results.py' 
 and open in a the browser the file 'wordcloud.htm'
 
+<br> 
+
+### Disclaimer
+
+The scripts and files used for the visualization,
+were taken almost as is from contents of the courses 
+and specifically correspond to the files:  
+
+1. 'visualize_results.py' to 'code3/gmane/gword.py'
+2. 'wordcloud.js' to 'code3/gmane/gword.js'
+3. 'wordcloud.htm' to 'code3/gmane/gword.htm'
+
+And the JavaScript Libraries as is: 
+1. d3.v2.js
+2. d3.layout.cloud.js
+
+from the repo:
+> https://github.com/csev/py4e
+
+<br>
+
 ### FAQ
 
 #### Why the data retrieving process hangs for a minute evry 20 or 30 requests?
 
-Intentianally, to conform with what the openai's API suggests.
+Intentionally, to conform with what the openai's API demands.
 
