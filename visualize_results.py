@@ -41,7 +41,7 @@ smallsize = 20
 fhand = open('wordcloud.js','w')
 fhand.write("wordcloud = [")
 first = True
-for k in x[:100]:
+for k in x[:50]:
     if not first : fhand.write( ",\n")
     first = False
     size = counts[k]

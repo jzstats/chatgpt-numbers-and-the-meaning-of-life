@@ -7,7 +7,7 @@
 <script>
   var fill = d3.scale.category20();
 
-  d3.layout.cloud().size([600, 600])
+  d3.layout.cloud().size([500, 500])
       .words(wordcloud)
       .rotate(function() { return ~~(Math.random() * 2) * 90; })
       .font("Impact")
@@ -15,7 +15,7 @@
       .on("end", draw)
       .start();
 
-  function draw(words)  
+  function draw(words) {
     d3.select("body").append("svg")
         .attr("width", 600)
         .attr("height", 600)
