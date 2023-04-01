@@ -12,9 +12,8 @@ This question is in the core of this project.
 - [Prologue](#prologue)  
 - [Synopsis](#synopsis)  
 - [Process](#process)  
-  - [Retrieving Raw Data](#retrieving-the-raw-data)  
-  - [Processing Raw Data](#processing-the-raw-data)  
-    - [Overview](#processing-the-raw-data-overview)  
+  - [Retrieving the Raw Data](#retrieving-the-raw-data)  
+  - [Processing the Raw Data](#processing-the-raw-data)  
     - [Details](#processing-the-raw-data-details)  
     - [Attention](#processing-the-raw-data-attention)   
   - [Summarizing the Results](#summarizing-the-results)  
@@ -66,21 +65,12 @@ The process can be thought as four major
 
 ### Retrieving the Raw Data {#retrieving-the-raw-data}
 
-The script 'retrieve_raw_data.py' was used to collect the data.
-When it runs, it asks the user for the number of raw responses that should be gathered.
+The program communicates with ChatGPT through the available API,
+and at each iteration it asks the agent to the same prompt:  
 
-To achieve it, it communicates with the ChatGPT through the available API.
+> give a number
 
-It is required for the user to already have access to the API 
-and to put his API key in a file called 'config.py' 
-which will contain one line:
-> api_key = \<the-api-key-of-the-user\\>
-
-(this file was not included in the repo 
-to hide the API key used for the project, 
-which is my personal one!)
-
-At each iteration the raw response get's stored 
+Each raw response get's stored 
 as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
 [back to Process](#process)  
@@ -88,17 +78,12 @@ as-is in an SQL Lite DB (called 'rawdb.sqlite').
 
 ### Processing the Raw Data {#processing-the-raw-data}
 
-The script 'prossess_raw_data.py' was used to process the data.
-
-#### Overview {#processing-the-raw-data-overview}
-
 The raw responses (that were gathered in the previous phase),
 needed to be processed as the agent returned them in various non-standard formats.
 
 The responses got cleaned and the number of each response was extracted
 and got stored in another SQL Lite DB.
 
-[back to Processing the Raw Data](#processing-the-raw-data)  
 [back to Process](#process)  
 [back to Contents](#contents)  
 
@@ -132,17 +117,18 @@ so that all cases will correctly count as 3.14.
 
 #### Attension {#processing-the-raw-data-attention}
 
-The cleaning phase is not fully robust, as the process may fail 
-if one uses the script 'retrieve_raw_data.py 'to collect new data. 
+The cleaning phase is not fully robust, 
+as the process is sensitive the data collected 
+and may fail when new data gets collected. 
 
-It is possible that there will be needed to manually 
-inspect the data in order to identify and handle some unexpected anomalies 
+It is possible that there will be need to manually inspect the data 
+in order to identify and handle some unexpected cases
 that were not encountered in this project.
 
-When the script runs it deletes the 'numbersdb.sqlite' DB 
-and creates a new one from the 'rawdb.sqlite' DB. Care!
-It is suggested to comment out the relevant line from 'main.py'
-once you have the raw data processed.
+At the start of the process 
+it deletes the 'numbersdb.sqlite' DB 
+and creates a new fresh one 
+from all the available data in 'rawdb.sqlite' DB. 
 
 [back to Processing the Raw Data](#processing-the-raw-data)  
 [back to Process](#process)  
@@ -179,21 +165,6 @@ visually examine the top 50 most frequently occuring numbers.
 
 [back to Process](#process)  
 [back to Contents](#contents)  
-
-#### Disclaimer {#visualizing-the-results-disclaimer}
-
-These two scripts that were used for the visuallization, 
-were taken almost as is from contents of the courses 
-and correspond to the files:  
-1. 'visualize_results.py' to 'code3/gmane/gword.py'
-2. 'wordcloud.htm' to 'code3/gmane/gword.htm'
-
-from the repo:
-> https://github.com/csev/py4e
-
-[back to Visualizing the Results](#visualizing-the-results)  
-[back to Process](#process)  
-[back to Contents](#contents)    
 
 <br>
 
