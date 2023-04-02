@@ -22,8 +22,7 @@ This question is in the core of this project.
   - [Top 5 most frequently occuring numbers](#results-top-5)  
   - [Top 50 most frequently occuring numbers](#results-top-50)  
 - [Nerd Mythology and Fun!](#nerd-mythology-and-fun)   
-- [A Thank You to Vaggos](#a-thank-you-to-vaggos)  
-- [References](#references)  
+  - [A Thank You to Vaggos](#a-thank-you-to-vaggos)  
 
 ## Prologue {#prologue}
 
@@ -287,32 +286,9 @@ giving this iconic number back in such frequency makes the imagination tick.
 Does the bot hides something?? Is it some code for his fellow bots or a message for humanity?
 For sure a decent 'Black Mirror' episode could be made out of this! 
 
-[back to Contents](#contents)  
-
-<br>
-
-## A Thank You to Vaggos! {#a-thank-you-to-vaggos}
+### A Thank You to Vaggos! {#a-thank-you-to-vaggos}
 
 My friend who knew and brought to my aweraness the story around 42.
 
 [back to Contents](#contents)  
 
-<br>
-
-## References {#references}
-
-Placeholder for reference to the py4e course and repo
-
-Placeholder for reference to the HitchHikers Guide to the Galaxy
-
-Python Software Foundation. Python Language Reference, version 3.10.10 Available at http://www.python.org
-
-Placeholder for reference to python package time
-
-Placeholder for reference to python package openai
-
-
-
-[back to Contents](#contents)  
-
-<br>
