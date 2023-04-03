@@ -57,7 +57,12 @@ Finally the results were summarized and visualized.
 
 ## Process {#process}
 
-The process can be thought as four major
+The process is as modularized in four parts:
+
+  - [Retrieving the Raw Data](#retrieving-the-raw-data)  
+  - [Processing the Raw Data](#processing-the-raw-data)  
+  - [Summarizing the Results](#summarizing-the-results)  
+  - [Visualizing the Results](#visualizing-the-results)  
 
 ### Retrieving the Raw Data {#retrieving-the-raw-data}
 
