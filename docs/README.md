@@ -293,7 +293,9 @@ For sure a decent 'Black Mirror' episode could be made out of this!
 
 ### A Thank You to Vaggos! {#a-thank-you-to-vaggos}
 
-My friend who knew and brought to my aweraness the story around 42.
+My friend [Vaggelis](https://www.linkedin.com/in/vangelis-kartsaklis-b323a7153/?original_referer=) 
+who knew and brought to my aweraness the story around 42.
+
 
 [back to Contents](#contents)  
 
